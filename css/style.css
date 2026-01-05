@@ -273,9 +273,7 @@ font-size: 0.9rem;  margin-right: 5px;
   }
   
   /* Hide utility bar completely on very small screens */
-  .utility-bar {
-    /* display: none; */
-  }
+  
   .utility-left span{
     display: none;
 
