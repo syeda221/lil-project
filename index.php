@@ -69,11 +69,10 @@
       <a href="#">Help</a>
     </div>
   </div>
-
-  <div style="height: 2000px; padding: 20px;">
-    <p>ni aliquam sint aperiam perferendis vel, animi et dolorum, ea quos!</p>
+  <div class="main">
+    <div class="banner"><img src="pictures/banner.jpg" style="width:100vw;hieght: calc(100%-100px) ;  " alt=""></div>
   </div>
-
+ 
   <script>
     // Hamburger menu toggle
     function toggleMenu() {
