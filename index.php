@@ -71,6 +71,10 @@
   </div>
   <div class="main">
     <div class="banner"><img src="pictures/banner.jpg" style="width:100vw;hieght: calc(100%-100px) ;  " alt=""></div>
+    <div class="container">
+      <h1>Welcome to Scentmart</h1>
+    </div>  
+  
   </div>
  
   <script>
