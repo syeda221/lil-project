@@ -14,8 +14,8 @@ body {
 .top-bar {
   position: sticky;
   top: 0;
-  background-color: #a30e0e;
-  color: #fff;
+  background-color: #FF8906;
+  color: black;
   text-align: center;
   padding: 5px 5px;
   font-size: 0.9rem;
@@ -25,7 +25,7 @@ body {
 
 /* Utility Bar */
 .utility-bar {
-  background-color: #14215a;
+  background-color: black;
   display: flex;
   color: white;
   justify-content: space-between;
@@ -137,7 +137,7 @@ font-size: 0.9rem;  margin-right: 5px;
 }
 
 .nav-para span {
-  color: rgb(175, 0, 0);
+  color: #F25F4C;
   font-weight: 600;
 }
 

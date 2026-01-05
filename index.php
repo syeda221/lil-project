@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Responsive Website Header</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="head.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -31,11 +31,12 @@
 
   <!-- Main Header -->
   <div class="main-header">
-    <p class="nav-para">perspiciatis sit labore porro Lorem, ipsum 
-        <span><br>Lorem ipsum dolor sit </span></p>
+    <p class="nav-para">Scents Mart brings you premium fragrances that 
+
+        <span><br> leave a lasting impression.</span></p>
     
     <div class="logo">
-      <img src="colorful.png" alt="Logo">
+      <img src="pictures/trlogo.png" alt="Logo">
     </div>
 
     <div class="search-container">
