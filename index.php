@@ -102,105 +102,42 @@
       </div>
       <div class="card">
         <div class="card-img"><img src="pictures/pic2.jpg" alt=""></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
+        <div class="title">Channel</div>
+        <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet.</p>
+        <div class="card-btns"><button>Add to Cart</button><button>View Product</button></div>
       </div>
       <div class="card">
         <div class="card-img"><img src="pictures/pic3.jpg" alt=""></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
+        <div class="title">Channel</div>
+        <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet.</p>
+        <div class="card-btns"><button>Add to Cart</button><button>View Product</button></div>
       </div>
       <div class="card">
-        <div class="card-img"></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
+        <div class="card-img"><img src="pictures/pic4.jpg" alt=""></div>
+        <div class="title">Channel</div>
+        <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet.</p>
+        <div class="card-btns"><button>Add to Cart</button><button>View Product</button></div>
       </div>
       <div class="card">
-        <div class="card-img"></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
+        <div class="card-img"><img src="pictures/pic5.jpg" alt=""></div>
+        <div class="title">Channel</div>
+        <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet.</p>
+        <div class="card-btns"><button>Add to Cart</button><button>View Product</button></div>
       </div>
       <div class="card">
-        <div class="card-img"></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
-      </div><div class="card">
-        <div class="card-img"></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
-      </div><div class="card">
-        <div class="card-img"></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
-      </div><div class="card">
-        <div class="card-img"></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
-      </div><div class="card">
-        <div class="card-img"></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
-      </div><div class="card">
-        <div class="card-img"></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
-      </div><div class="card">
-        <div class="card-img"></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
-      </div><div class="card">
-        <div class="card-img"></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
-      </div><div class="card">
-        <div class="card-img"></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
-      </div><div class="card">
-        <div class="card-img"></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
-      </div><div class="card">
-        <div class="card-img"></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
-      </div><div class="card">
-        <div class="card-img"></div>
-        <div class="title"></div>
-        <p class="discription"></p>
-        <div class="card-btns"></div>
-        <div class="card-btns"></div>
+        <div class="card-img"><img src="pictures/pic6.jpg" alt=""></div>
+        <div class="title">Channel</div>
+        <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet.</p>
+        <div class="card-btns"><button>Add to Cart</button><button>View Product</button></div>
       </div>
+      <div class="card">
+        <div class="card-img"><img src="pictures/pic7.jpg" alt=""></div>
+        <div class="title">Channel</div>
+        <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet.</p>
+        <div class="card-btns"><button>Add to Cart</button><button>View Product</button></div>
+      </div>
+      
+      
      
 </section>
     
