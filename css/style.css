@@ -13,12 +13,12 @@ body {
 .top-bar {
   position: sticky;
   top: 0;
-  background-color: #a71d57e5;
-  color: black;
+  background-color: #eb9dda;
+  color: rgb(2, 2, 2);
   text-align: center;
   padding: 5px 5px;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 500;
   z-index: 1000;
 }
 
@@ -169,10 +169,37 @@ font-size: 0.9rem;  margin-right: 5px;
   white-space: nowrap;
 }
 
-.nav-links a:hover {
+/* .nav-links a:hover {
   text-decoration: underline;
+} */
+
+.dropdown {
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
 }
 
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  display: none;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  /* padding: 10px 14px; */
+  white-space: nowrap;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+
+}
 /* Hamburger Button */
 .menu-toggle {
   display: none;
@@ -194,11 +221,43 @@ font-size: 0.9rem;  margin-right: 5px;
   text-align: center;
   margin-top: 40px;
 }
+.cards-container{
+  margin: 0 60px;
+  display: flex;
+  flex-wrap: wrap;
 
-
-
-
-
+  gap: 20px;;
+}
+.card{
+  width: 260px;
+  height: 400px;
+  border: 1px rgba(128, 128, 128, 0.336) solid;
+}
+.card-img img{
+  width: 258px;
+  height: auto;
+}
+.card .title{
+  font-size: 1rem;
+  font-weight: 550;
+  margin: 5px;
+}
+.card .discription{
+  font-size: 0.9rem;
+  margin: 5px;
+  color: #333;
+}
+.card-btns button{
+  padding: 10px 8px;
+  display: inline-block;
+  margin: 8px;
+  border: none;
+  background-color: #eb9dda;
+  color: rgb(12, 12, 12);
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
 
 

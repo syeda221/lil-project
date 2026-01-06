@@ -60,13 +60,32 @@
   <!-- Navigation Menu -->
   <div class="nav-menu">
     <div class="nav-links">
-      <a href="#">Create</a>
-      <a href="#">Shop</a>
-      <a href="#">Fabrics</a>
-      <a href="#">Design</a>
-      <a href="#">Business & Benefit</a>
-      <a href="#">How to Order</a>
-      <a href="#">Help</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+       <div class="dropdown">
+      <a href="#" class="drop-btn">Category</a>
+      <div class="dropdown-menu">
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">Kids</a>
+        <a href="#">Accessories</a>
+      </div>
+    </div>
+
+    <!-- Brands Dropdown -->
+    <div class="dropdown">
+      <a href="#" class="drop-btn">Brands</a>
+      <div class="dropdown-menu">
+        <a href="#">Nike</a>
+        <a href="#">Adidas</a>
+        <a href="#">Puma</a>
+        <a href="#">Zara</a>
+      </div>
+    </div>
+
+      <a href="#">FAQ</a>
+      <!-- <a href="#">How to Order</a>
+      <a href="#">Help</a> -->
     </div>
   </div>
   <div class="main">
@@ -74,8 +93,118 @@
     <div class="container">
       <h1>Welcome to Scentmart</h1>
     </div>  
-  
-  </div>
+    <section class="cards-container">
+      <div class="card">
+        <div class="card-img"><img src="pictures/pic1.jpg" alt=""></div>
+        <div class="title">Channel</div>
+        <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet.</p>
+        <div class="card-btns"><button>Add to Cart</button><button>View Product</button></div>
+      </div>
+      <div class="card">
+        <div class="card-img"><img src="pictures/pic2.jpg" alt=""></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div>
+      <div class="card">
+        <div class="card-img"><img src="pictures/pic3.jpg" alt=""></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div>
+      <div class="card">
+        <div class="card-img"></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div>
+      <div class="card">
+        <div class="card-img"></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div>
+      <div class="card">
+        <div class="card-img"></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div><div class="card">
+        <div class="card-img"></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div><div class="card">
+        <div class="card-img"></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div><div class="card">
+        <div class="card-img"></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div><div class="card">
+        <div class="card-img"></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div><div class="card">
+        <div class="card-img"></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div><div class="card">
+        <div class="card-img"></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div><div class="card">
+        <div class="card-img"></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div><div class="card">
+        <div class="card-img"></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div><div class="card">
+        <div class="card-img"></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div><div class="card">
+        <div class="card-img"></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div><div class="card">
+        <div class="card-img"></div>
+        <div class="title"></div>
+        <p class="discription"></p>
+        <div class="card-btns"></div>
+        <div class="card-btns"></div>
+      </div>
+     
+</section>
+    
+</div>
  
   <script>
     // Hamburger menu toggle
