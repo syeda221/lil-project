@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inserting Category</title>
-</head>
-<body>
-    
-</body>
-</html>
+
+
+
+    <?php  include('../includes/connects.php') ;?>
+    <form action="" method="post" class="insert-category">
+        <label for="form_control"></label>
+        <span>:)</span>
+        <input type="text" name="form_control"  placeholder="username" id="">
+        <input type="submit" value="Insert Category" name="insert_category">
+    </form>

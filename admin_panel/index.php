@@ -24,17 +24,25 @@
                 <img src="../pictures/profile.webp" alt="">
             </div>
             <div class="admin-btns">
-                <button class="admin-btn"><a href="">Insert Product</a></button>
-                <button class="admin-btn"><a href="">Veiw Product</a></button>
-                <button class="admin-btn"><a href="">Insert Category</a></button>
-                <button class="admin-btn"><a href="">Veiw Category</a></button>
-                <button class="admin-btn"><a href="">Insert Brand</a></button>
-                <button class="admin-btn"><a href="">Veiw Brand</a></button>
-                <button class="admin-btn"><a href="">All Payments</a></button>
-                <button class="admin-btn"><a href="">All Orders</a></button>
-                <button class="admin-btn"><a href="">List of Users</a></button>
+                <a href=""><button class="admin-btn">Insert Product</button></a>
+                <a href=""><button class="admin-btn">Veiw Product</button></a>
+                <a href="index.php?insert_category"><button class="admin-btn">Insert Category</button></a>
+                <a href=""><button class="admin-btn">Veiw Category</button></a>
+                <a href="index.php?insert_brands"><button class="admin-btn">Insert Brand</button></a>
+                <a href=""><button class="admin-btn">Veiw Brand</button></a>
+                <a href=""><button class="admin-btn">All Payments</button></a>
+                <a href=""><button class="admin-btn">All Orders</button></a>
+                <a href=""><button class="admin-btn">List of Users</button></a>
             </div>
         </div>
     </section>
+    <?php
+    if(isset($_GET['insert_category'])){
+        include("insert_category.php");
+    }
+    if (isset($_GET['insert_brands'])){
+        include("insert_brand.php");
+    }
+    ?>
 </body>
 </html>
