@@ -1,6 +1,3 @@
-
-
-
     <?php  include('../includes/connects.php') ;
     if(isset($_POST['insert_category'])){
         $insert_category= $_POST['category'];
