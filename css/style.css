@@ -31,10 +31,10 @@ nav{
 }
 
 /* insert category */
-.insert-category{
+.insert-form{
 margin: 50px 50px;
 }
-.insert-category input{
+.insert-form input{
   padding: 9px 12px;
   margin-bottom:5px;
   border: none;
@@ -42,12 +42,12 @@ margin: 50px 50px;
 
   width: 90%;
 }
-.insert-category input[type="submit"]{
+.insert-form  input[type="submit"]{
   width: 20%;
   background-color: black;
   color: white;
 }
-.insert-category span{
+.insert-form span{
   background-color: #000000;
   margin: 0;
   color: white;
