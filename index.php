@@ -1,3 +1,5 @@
+<?php include ('includes/connects.php');  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,10 +67,18 @@
        <div class="dropdown">
       <a href="#" class="drop-btn">Category</a>
       <div class="dropdown-menu">
-        <a href="#">Men</a>
-        <a href="#">Women</a>
-        <a href="#">Kids</a>
-        <a href="#">Accessories</a>
+      <?php  
+      $select_sql= "select*from category";
+      $result_sql= mysqli_query($conn, $select_sql);  
+      $data = mysqli_fetch_assoc($result_sql);
+     
+      echo "<a href='#'>".$data['cat_name']."</a>";
+
+      
+       
+        ?>
+      
+        
       </div>
     </div>
 
