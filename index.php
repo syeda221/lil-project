@@ -68,12 +68,15 @@
       <a href="#" class="drop-btn">Category</a>
       <div class="dropdown-menu">
       <?php  
-      $select_sql= "select*from category";
-      $result_sql= mysqli_query($conn, $select_sql);  
-      $data = mysqli_fetch_assoc($result_sql);
-     
-      echo "<a href='#'>".$data['cat_name']."</a>";
+      $select_cat= "select*from category";
+      $result_cat= mysqli_query($conn, $select_cat);  
+     while($row = mysqli_fetch_assoc($result_cat)){
+      $cat_name= $row['cat_name'];
+      $cat_id = $row['cat_id'];
+      echo "<a href='index.php?category=$cat_id'>".$cat_name."</a>";
 
+
+     }
       
        
         ?>
@@ -86,20 +89,26 @@
     <div class="dropdown">
       <a href="#" class="drop-btn">Brands</a>
       <div class="dropdown-menu">
-        <a href="#">Nike</a>
-        <a href="#">Adidas</a>
-        <a href="#">Puma</a>
-        <a href="#">Zara</a>
+        <?php 
+        $select_brand= "select * from brands";
+        $result_brand = mysqli_query($conn , $select_brand);
+        while($row = mysqli_fetch_assoc($result_brand)){
+          $brand_id = $row['brand_id'];
+           echo  "<a href='index.php?brand=$brand_id'>".$row['brand_name'] . "</a>";
+       
+        }
+        
+        ?>
+        
       </div>
     </div>
 
       <a href="#">FAQ</a>
-      <!-- <a href="#">How to Order</a>
-      <a href="#">Help</a> -->
+     
     </div>
   </div>
   <div class="main">
-    <div class="banner"><img src="pictures/banner.jpg" style="width:100vw;hieght: calc(100%-100px) ;  " alt=""></div>
+    <div class="banner"><img src="pictures/banner.jpg" style="width:100vw;height: calc(100%-100px) ;  " alt=""></div>
     <div class="container">
       <h1>Welcome to Scentmart</h1>
     </div>  

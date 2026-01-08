@@ -174,7 +174,7 @@ font-size: 0.9rem;  margin-right: 5px;
   top: 1.7rem;
   display: flex;
   align-items: center;
-  padding: 15px 20px;
+  padding: 0px 20px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   flex-wrap: wrap;
@@ -243,7 +243,7 @@ font-size: 0.9rem;  margin-right: 5px;
   background-color: #fcfcfc;
   width: 100%;
    position: sticky;
-  top: 10.7rem;
+  top: 8.5rem;
   z-index: 100;
 }
 
@@ -324,13 +324,13 @@ font-size: 0.9rem;  margin-right: 5px;
   gap: 20px;;
 }
 .card{
-  width: 260px;
-  height: 400px;
+  width: 220px;
+  height: auto;
   border: 1px rgba(128, 128, 128, 0.336) solid;
   margin:13px 0 ;
 }
 .card-img img{
-  width: 258px;
+  width: 220px;
   height: auto;
 }
 .card .title{
@@ -344,17 +344,19 @@ font-size: 0.9rem;  margin-right: 5px;
   color: #333;
 }
 .card-btns button{
-  padding: 10px 8px;
+  padding: 10px 5px;
   display: inline-block;
   margin: 8px;
   border: none;
   background-color: #eb9dda;
   color: rgb(12, 12, 12);
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 4px;
   cursor: pointer;
 }
-
+.card-btns{
+  margin-top: 20px;
+}
 
 
 
