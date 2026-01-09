@@ -20,6 +20,8 @@
     
     ?>
     
+    <h2>Insert brand</h2>
+
     
     <form action="" method="post" class="insert-form">
         <label for="form_control"></label>

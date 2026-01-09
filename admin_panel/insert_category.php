@@ -18,6 +18,8 @@
        }
     
     ?>
+    <h2>Insert category</h2>
+
     <form action="" method="post" class="insert-form">
         <label for="form_control"></label>
         <span>:)</span>

@@ -34,9 +34,16 @@ nav{
 .insert-form{
 margin: 50px 50px;
 }
+.insert-form .dropdown{
+  height: 30px;
+  margin: 10px 0; 
+  width: 90%;
+
+}
 .insert-form input{
   padding: 9px 12px;
   margin-bottom:5px;
+  margin: 10px 0; 
   border: none;
   background-color: #cfcece;
 
