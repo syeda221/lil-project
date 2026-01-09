@@ -18,7 +18,8 @@
        }
     
     ?>
-    <h2>Insert category</h2>
+        <h2 class="forms-h2">Insert Category</h2>
+
 
     <form action="" method="post" class="insert-form">
         <label for="form_control"></label>

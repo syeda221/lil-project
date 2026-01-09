@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h2>Insert Product</h2>
+    <h2 class="forms-h2">Insert Product</h2>
     <form action="" method="post" class="insert-form" enctype="multipart/form-data"><br>
         <label for="product_title">Product Title</label><br>
         <input type="text" name="product_title" placeholder="Product Title"><br>  

@@ -20,7 +20,8 @@
     
     ?>
     
-    <h2>Insert brand</h2>
+        <h2 class="forms-h2">Insert Brand</h2>
+
 
     
     <form action="" method="post" class="insert-form">

@@ -31,8 +31,13 @@ nav{
 }
 
 /* insert category */
+.forms-h2{
+  margin: 10px 50px ;
+  font-size: 1.7rem;
+
+}
 .insert-form{
-margin: 50px 50px;
+margin: 10px 50px;
 }
 .insert-form .dropdown{
   height: 30px;

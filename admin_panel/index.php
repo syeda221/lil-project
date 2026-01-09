@@ -24,7 +24,7 @@
                 <img src="../pictures/profile.webp" alt="">
             </div>
             <div class="admin-btns">
-                <a href=""><button class="admin-btn">Insert Product</button></a>
+                <a href="index.php?insert_product"><button class="admin-btn">Insert Product</button></a>
                 <a href=""><button class="admin-btn">Veiw Product</button></a>
                 <a href="index.php?insert_category"><button class="admin-btn">Insert Category</button></a>
                 <a href=""><button class="admin-btn">Veiw Category</button></a>
@@ -42,6 +42,9 @@
     }
     if (isset($_GET['insert_brands'])){
         include("insert_brand.php");
+    }
+    if(isset($_GET['insert_product'])){
+        include 'insert_product.php';
     }
     ?>
 </body>
