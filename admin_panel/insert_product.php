@@ -108,7 +108,7 @@ if(isset($_POST['add_product'])){
         move_uploaded_file($img2_temp,$img2_folder );
         move_uploaded_file($img3_temp,$img3_folder );
  $add_query = "insert into  `product` (`product_title`,`product_discription` , `product_keyword` ,`cat_id` , `brand_id`, `product_image1`,`product_image2` ,`product_image3` , `product_price`) 
-        values('$product_title' ,'$product_dis','$product_keyword', '$product_cat','$product_brand','$img1_folder','$img2_folder' ,'$img3_folder' ,'$price') ";
+        values('$product_title' ,'$product_dis','$product_keyword', '$product_cat','$product_brand','$img1','$img2' ,'$img3' ,'$price') ";
             $add_result = mysqli_query($conn , $add_query);
         if(!$add_result){
             echo  "this is an error in your code " . mysqli_error($conn);
