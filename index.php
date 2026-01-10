@@ -113,48 +113,22 @@
       <h1>Welcome to Scentmart</h1>
     </div>  
     <section class="cards-container">
-      <div class="card">
-        <div class="card-img"><img src="pictures/pic1.jpg" alt=""></div>
-        <div class="title">Channel</div>
-        <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet.</p>
-        <div class="card-btns"><button>Add to Cart</button><button>View Product</button></div>
-      </div>
-      <div class="card">
-        <div class="card-img"><img src="pictures/pic2.jpg" alt=""></div>
-        <div class="title">Channel</div>
-        <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet.</p>
-        <div class="card-btns"><button>Add to Cart</button><button>View Product</button></div>
-      </div>
-      <div class="card">
-        <div class="card-img"><img src="pictures/pic3.jpg" alt=""></div>
-        <div class="title">Channel</div>
-        <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet.</p>
-        <div class="card-btns"><button>Add to Cart</button><button>View Product</button></div>
-      </div>
-      <div class="card">
-        <div class="card-img"><img src="pictures/pic4.jpg" alt=""></div>
-        <div class="title">Channel</div>
-        <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet.</p>
-        <div class="card-btns"><button>Add to Cart</button><button>View Product</button></div>
-      </div>
-      <div class="card">
-        <div class="card-img"><img src="pictures/pic5.jpg" alt=""></div>
-        <div class="title">Channel</div>
-        <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet.</p>
-        <div class="card-btns"><button>Add to Cart</button><button>View Product</button></div>
-      </div>
-      <div class="card">
-        <div class="card-img"><img src="pictures/pic6.jpg" alt=""></div>
-        <div class="title">Channel</div>
-        <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet.</p>
-        <div class="card-btns"><button>Add to Cart</button><button>View Product</button></div>
-      </div>
-      <div class="card">
-        <div class="card-img"><img src="pictures/pic7.jpg" alt=""></div>
-        <div class="title">Channel</div>
-        <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet.</p>
-        <div class="card-btns"><button>Add to Cart</button><button>View Product</button></div>
-      </div>
+
+    <?php 
+    $select_product = "select * from product";
+    $result_product = mysqli_query($conn , $select_product);
+    while($row = mysqli_fetch_assoc($result_product)){
+      echo "<div class='card'>
+        <div class='card-img'><img src='pictures/{$row['product_image1']}' alt=''></div>
+        <div class='title'>{$row['product_title']}</div>
+        <p class='discription'>{$row['product_discription']}</p>
+        <div class='card-btns'><button>Add to Cart</button><button>View Product</button></div>
+      </div>";
+    }
+    
+    ?>
+      
+      
       
       
      
