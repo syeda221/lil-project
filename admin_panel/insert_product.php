@@ -1,13 +1,5 @@
 <?php include '../includes/connects.php' ; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>insert products</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
+
     <h2 class="forms-h2">Insert Product</h2>
     <form action="" method="post" class="insert-form" enctype="multipart/form-data"><br>
         <label for="product_title">Product Title</label><br>
@@ -118,5 +110,3 @@ if(isset($_POST['add_product'])){
 }
 ?>
 
-</body>
-</html>
