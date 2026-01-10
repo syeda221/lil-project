@@ -8,15 +8,7 @@ if(!$result_select){
     echo "<script> there is the error in your code </script>";
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>view category</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
+
     <h2 class="forms-h2">View Brands</h2>
   <table class="view-table">
     <tr>
@@ -30,5 +22,3 @@ if(!$result_select){
     }
     ?>
   </table>
-</body>
-</html>

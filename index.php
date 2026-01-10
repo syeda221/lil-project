@@ -44,9 +44,9 @@
     <div class="search-container">
       <div class="search-bar">
         <div class="link">
-          <a href="#"><i class="fa-solid fa-truck"></i><span>Track</span></a>
-          |
-          <a href="#"><i class="fa-solid fa-box-open"></i><span>Bulk</span></a>
+          <a href=""><span>Search</span></a>
+          
+         
         </div>
         <input type="text" placeholder="Search ">
       </div>

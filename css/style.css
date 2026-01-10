@@ -79,7 +79,10 @@ margin: 10px 50px;
 .view-table th,td{
   border: 1px black solid;
   padding: 10px
-};
+}
+.view-table img{
+  width: 100px;
+}
 /* navigation admin panel */
 .nav-message {
   display: flex;
