@@ -63,30 +63,30 @@ if(isset($_POST['add_product'])){
     //giving name and temp name  =====STEP 1
     $img1 = $_FILES['product_image1']['name'];
     $img1_temp = $_FILES['product_image1']['tmp_name'];
-    $img2 = $_FILES['product_image2']['name'];
-    $img2_temp = $_FILES['product_image2']['tmp_name'];
-    $img3 = $_FILES['product_image3']['name'];
-    $img3_temp = $_FILES['product_image3']['tmp_name'];
-    $price = $_POST['product_price'];
+    // $img2 = $_FILES['product_image2']['name'];
+    // $img2_temp = $_FILES['product_image2']['tmp_name'];
+    // $img3 = $_FILES['product_image3']['name'];
+    // $img3_temp = $_FILES['product_image3']['tmp_name'];
+    // $price = $_POST['product_price'];
 
     //folder address  =====STEP 2
 
     $img1_folder = "../pictures/".$img1;
-    $img2_folder = "../pictures/".$img2;
-    $img3_folder = "../pictures/".$img3;
+    // $img2_folder = "../pictures/".$img2;
+    // $img3_folder = "../pictures/".$img3;
 
    
     //breaking image into extension  =====STEP 4
 
     $file1_sep = explode("." , $img1);
-    $file2_sep = explode("." , $img2);
-    $file3_sep = explode("." , $img3);
+    // $file2_sep = explode("." , $img2);
+    // $file3_sep = explode("." , $img3);
     
     //geting extension  =====STEP 5
 
     $file1_extension = strtolower(end($file1_sep));
-    $file2_extension = strtolower(end($file2_sep));
-    $file3_extension = strtolower(end($file3_sep));
+    // $file2_extension = strtolower(end($file2_sep));
+    // $file3_extension = strtolower(end($file3_sep));
 
     //allowed extensions =====STEP 6
 
@@ -94,21 +94,21 @@ if(isset($_POST['add_product'])){
 
     //file exytension array  =====STEP 7
     
-    $file_extension=[$file1_extension,$file2_extension,$file3_extension];
+    // $file_extension=[$file1_extension,$file2_extension,$file3_extension];
 
     //checking extensions =====STEP 7
-    foreach($file_extension as $ext){
-    if(!in_array($ext ,$extension) ){
+    // foreach($file_extension as $ext){
+    if(!in_array($file1_extension ,$extension) ){
         echo "<script> alert('only JPEG,JPG,PNG')</script>";
         exit();
     }
-    }
+    
   
-        move_uploaded_file($img1_temp,$img1_folder );
-        move_uploaded_file($img2_temp,$img2_folder );
-        move_uploaded_file($img3_temp,$img3_folder );
- $add_query = "insert into  `product` (`product_title`,`product_discription` , `product_keyword` ,`cat_id` , `brand_id`, `product_image1`,`product_image2` ,`product_image3` , `product_price`) 
-        values('$product_title' ,'$product_dis','$product_keyword', '$product_cat','$product_brand','$img1','$img2' ,'$img3' ,'$price') ";
+        // move_uploaded_file($img1_temp,$img1_folder );
+        // move_uploaded_file($img2_temp,$img2_folder );
+        // move_uploaded_file($img3_temp,$img3_folder );
+ $add_query = "insert into  `product` (`product_title`,`product_discription` , `product_keyword` ,`cat_id` , `brand_id`, `product_image1`, `product_price`) 
+        values('$product_title' ,'$product_dis','$product_keyword', '$product_cat','$product_brand','$img1' ,'$price') ";
             $add_result = mysqli_query($conn , $add_query);
         if(!$add_result){
             echo  "this is an error in your code " . mysqli_error($conn);
