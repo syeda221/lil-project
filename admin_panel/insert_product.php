@@ -67,7 +67,7 @@ if(isset($_POST['add_product'])){
     // $img2_temp = $_FILES['product_image2']['tmp_name'];
     // $img3 = $_FILES['product_image3']['name'];
     // $img3_temp = $_FILES['product_image3']['tmp_name'];
-    // $price = $_POST['product_price'];
+    $price = $_POST['product_price'];
 
     //folder address  =====STEP 2
 
