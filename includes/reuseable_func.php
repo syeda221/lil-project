@@ -57,12 +57,14 @@ function nav(){
     <div class="search-container">
       <div class="search-bar">
         <div class="link">
-          <input style="width:50px;margin:0; padding:10px 0;border-radius:0 ;background-color:black;color:white;" type="submit" value="Search">
+          <form action="#" method="get">
+          <input name="search" style="width:50px;margin:0; padding:10px 0;border-radius:0 ;background-color:black;color:white;" type="submit" value="Search">
           
           
          
         </div>
-        <input style="border-radius:0; width:270px" type="text" placeholder="Search ">
+        <input style="border-radius:0; width:270px" type="text" name="search_data" placeholder="Search ">
+        </form>
       </div>
     </div>
 
