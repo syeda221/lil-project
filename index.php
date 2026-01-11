@@ -115,7 +115,7 @@
     <section class="cards-container">
 
     <?php 
-    $select_product = "select * from product";
+    $select_product = "select * from product order by rand() limit 9";
     $result_product = mysqli_query($conn , $select_product);
     while($row = mysqli_fetch_assoc($result_product)){
       echo "<div class='card'>
