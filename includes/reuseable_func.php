@@ -122,5 +122,38 @@ function product(){
     
 }}}
 
+function brand_product(){
+    if(isset($_GET['brand'])){
+    $brand_id = $_GET['brand'];
 
+     GLOBAL $conn;
+     $select_product = "select * from product where brand_id = $brand_id";
+    $result_product = mysqli_query($conn , $select_product);
+    while($row = mysqli_fetch_assoc($result_product)){
+      echo "<div class='card'>
+        <div class='card-img'><img src='pictures/{$row['product_image1']}' alt=''></div>
+        <div class='title'>{$row['product_title']}</div>
+        <p class='discription'>{$row['product_discription']}</p>
+        <div class='card-btns'><button>Add to Cart</button><button>View Product</button></div>
+      </div>";
+    }
+    }
+}
+function cat_product(){
+    if(isset($_GET['category'])){
+    $cat_id = $_GET['category'];
+
+     GLOBAL $conn;
+     $select_product = "select * from product where cat_id = $cat_id";
+    $result_product = mysqli_query($conn , $select_product);
+    while($row = mysqli_fetch_assoc($result_product)){
+      echo "<div class='card'>
+        <div class='card-img'><img src='pictures/{$row['product_image1']}' alt=''></div>
+        <div class='title'>{$row['product_title']}</div>
+        <p class='discription'>{$row['product_discription']}</p>
+        <div class='card-btns'><button>Add to Cart</button><button>View Product</button></div>
+      </div>";
+    }
+    }
+}
 ?>
