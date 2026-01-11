@@ -60,9 +60,9 @@ function nav(){
           <form action="#" method="get">
           <input name="search" style="width:50px;margin:0; padding:10px 0;border-radius:0 ;background-color:black;color:white;" type="submit" value="Search">
 
-        </div>
         <input style="border-radius:0; width:270px" type="text" name="search_data" placeholder="Search ">
         </form>
+        </div>
       </div>
     </div>
 
@@ -109,6 +109,7 @@ function nav(){
 function product(){
      if(!isset($_GET['brand'])){
         if(!isset($_GET['category'])){
+          if(!isset($_GET['search'])){
     GLOBAL $conn;
      $select_product = "select * from product order by rand() limit 9";
     $result_product = mysqli_query($conn , $select_product);
@@ -120,7 +121,7 @@ function product(){
         <div class='card-btns'><button>Add to Cart</button><button>View Product</button></div>
       </div>";
     }
-    
+          }
 }}}
 
 function brand_product(){
@@ -166,9 +167,9 @@ function search_product(){
   if(isset($_GET['search'])){
     $search_data = $_GET['search_data'];
      GLOBAL $conn;
-     $select_product = "select * from product where keyword = like '%$search_data%'";
-    $result_product = mysqli_query($conn , $select_product);
-    while($row = mysqli_fetch_assoc($result_product)){
+     $select_keyword = "select * from product where product_keyword like '%$search_data%'";
+    $result_keyword = mysqli_query($conn , $select_keyword);
+    while($row = mysqli_fetch_assoc($result_keyword)){
       echo "<div class='card'>
         <div class='card-img'><img src='pictures/{$row['product_image1']}' alt=''></div>
         <div class='title'>{$row['product_title']}</div>

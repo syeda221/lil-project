@@ -26,7 +26,7 @@ include ('includes/reuseable_func.php');
    product();
     cat_product();
     brand_product();
-    
+    search_product();
     ?>
       
       
