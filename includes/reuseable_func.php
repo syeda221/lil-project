@@ -57,11 +57,12 @@ function nav(){
     <div class="search-container">
       <div class="search-bar">
         <div class="link">
-          <a href=""><span>Search</span></a>
+          <input style="width:50px;margin:0; padding:10px 0;border-radius:0 ;background-color:black;color:white;" type="submit" value="Search">
+          
           
          
         </div>
-        <input type="text" placeholder="Search ">
+        <input style="border-radius:0; width:270px" type="text" placeholder="Search ">
       </div>
     </div>
 

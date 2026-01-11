@@ -221,17 +221,19 @@ font-size: 0.9rem;  margin-right: 5px;
 .logo {
   margin: 0;
 }
-
+.search-input{
+  width: 20px;
+}
 .search-container {
   display: flex;
   align-items: center;
-  gap: 15px;
+  /* gap: 15px; */
 }
 
 .search-bar {
   display: flex;
   align-items: center;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .search-bar input {
