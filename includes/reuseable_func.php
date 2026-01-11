@@ -125,10 +125,15 @@ function product(){
 function brand_product(){
     if(isset($_GET['brand'])){
     $brand_id = $_GET['brand'];
-
      GLOBAL $conn;
-     $select_product = "select * from product where brand_id = $brand_id";
+    $select_product = "select * from product where brand_id = $brand_id";
     $result_product = mysqli_query($conn , $select_product);
+    $num_row = mysqli_num_rows($result_product) ;
+     if($num_row==0){ 
+        include 'error.php';
+        }
+     else{
+    
     while($row = mysqli_fetch_assoc($result_product)){
       echo "<div class='card'>
         <div class='card-img'><img src='pictures/{$row['product_image1']}' alt=''></div>
@@ -137,7 +142,7 @@ function brand_product(){
         <div class='card-btns'><button>Add to Cart</button><button>View Product</button></div>
       </div>";
     }
-    }
+    }}
 }
 function cat_product(){
     if(isset($_GET['category'])){
