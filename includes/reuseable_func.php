@@ -59,9 +59,7 @@ function nav(){
         <div class="link">
           <form action="#" method="get">
           <input name="search" style="width:50px;margin:0; padding:10px 0;border-radius:0 ;background-color:black;color:white;" type="submit" value="Search">
-          
-          
-         
+
         </div>
         <input style="border-radius:0; width:270px" type="text" name="search_data" placeholder="Search ">
         </form>
@@ -163,5 +161,21 @@ function cat_product(){
       </div>";
     }
     }
+}
+function search_product(){
+  if(isset($_GET['search'])){
+    $search_data = $_GET['search_data'];
+     GLOBAL $conn;
+     $select_product = "select * from product where keyword = like '%$search_data%'";
+    $result_product = mysqli_query($conn , $select_product);
+    while($row = mysqli_fetch_assoc($result_product)){
+      echo "<div class='card'>
+        <div class='card-img'><img src='pictures/{$row['product_image1']}' alt=''></div>
+        <div class='title'>{$row['product_title']}</div>
+        <p class='discription'>{$row['product_discription']}</p>
+        <div class='card-btns'><button>Add to Cart</button><button>View Product</button></div>
+      </div>";
+    }
+  }
 }
 ?>
