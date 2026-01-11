@@ -23,7 +23,8 @@ function category(){
 
      }
 }
-function nav(){ ?>
+function nav(){ 
+   ?>
        <!-- Top Offer Bar -->
   <div class="top-bar">
     <marquee behavior="alternate">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</marquee>
@@ -105,6 +106,8 @@ function nav(){ ?>
   <?php
 }
 function product(){
+     if(!isset($_GET['brand'])){
+        if(!isset($_GET['category'])){
     GLOBAL $conn;
      $select_product = "select * from product order by rand() limit 9";
     $result_product = mysqli_query($conn , $select_product);
@@ -117,6 +120,7 @@ function product(){
       </div>";
     }
     
-}
+}}}
+
 
 ?>
