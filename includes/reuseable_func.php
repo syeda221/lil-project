@@ -118,7 +118,7 @@ function product(){
         <div class='card-img'><img src='pictures/{$row['product_image1']}' alt=''></div>
         <div class='title'>{$row['product_title']}</div>
         <p class='discription'>{$row['product_discription']}</p>
-        <div class='card-btns'><button>Add to Cart</button><button>View Product</button></div>
+        <div class='card-btns'><a href=index.php?add_to_cart=$row['product_id']><button>Add to Cart</button></a><a><button>View Product</button></a></div>
       </div>";
     }
           }
@@ -204,7 +204,14 @@ function cart(){
     $product_id= $_GET['add_to_cart'];
     $select_query = "select * from cart_detail where ip_address = '$ip' and product_id = $product_id";
     $result_query  = mysqli_query($conn , $select_query);
-  }
+    $row_num = mysqli_num_rows($result_query);
+    if($row_num ==0){
+      include 'error.php';
+    }
+    else{
+      echo "<script>this item is alresdy present in cart</script>";
+    }
+        }
 }
 
 ?>
