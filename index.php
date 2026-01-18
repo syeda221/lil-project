@@ -27,6 +27,9 @@ include ('includes/reuseable_func.php');
     cat_product();
     brand_product();
     search_product();
+    
+// Usage
+ get_client_ip();
     ?>
       
       

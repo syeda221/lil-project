@@ -179,4 +179,24 @@ function search_product(){
     }
   }
 }
+<?php
+// Function to get the client IP address, accounting for proxies
+function get_client_ip() {
+    $ipaddress = '';
+    if (isset($_SERVER['HTTP_CLIENT_IP'])) {
+        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+    } else if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        // Can contain a comma-separated list of IPs when multiple proxies are used
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else if (isset($_SERVER['REMOTE_ADDR'])) {
+        // The most reliable variable for the direct connecting IP
+        $ipaddress = $_SERVER['REMOTE_ADDR'];
+    } else {
+        $ipaddress = 'UNKNOWN';
+    }
+    return $ipaddress;
+}
+
+
+
 ?>
