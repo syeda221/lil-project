@@ -39,7 +39,7 @@ function nav(){
       <a href="#"><i class="fa-solid fa-user-plus"></i><span>Sign Up</span></a>
       <a href="#"><i class="fa-solid fa-right-to-bracket"></i><span>Login</span></a>
       <a href="#"><i class="fa-solid fa-heart"></i><span>Wishlist</span></a>
-      <a href="indexx.php?get_cart"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+      <a href="index.php?get_cart"><i class="fa-solid fa-cart-shopping"></i><span><?php cart();?>Cart</span></a>
       <a href="#">USD ▼</a>
     </div>
   </div>
