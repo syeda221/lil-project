@@ -179,7 +179,6 @@ function search_product(){
     }
   }
 }
-<?php
 // Function to get the client IP address, accounting for proxies
 function get_client_ip() {
     $ipaddress = '';
