@@ -179,6 +179,7 @@ function search_product(){
     }
   }
 }
+
 // Function to get the client IP address, accounting for proxies
 function get_client_ip() {
     $ipaddress = '';
@@ -196,6 +197,14 @@ function get_client_ip() {
     return $ipaddress;
 }
 
-
+function cart(){
+  if(isset($_GET['add_to_cart'])){
+    GLOBAL $conn;
+    $ip =  get_client_ip();
+    $product_id= $_GET['add_to_cart'];
+    $select_query = "select * from cart_detail where ip_address = '$ip' and product_id = $product_id";
+    $result_query  = mysqli_query($conn , $select_query);
+  }
+}
 
 ?>

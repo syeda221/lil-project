@@ -28,8 +28,8 @@ include ('includes/reuseable_func.php');
     brand_product();
     search_product();
     
-// Usage
- get_client_ip();
+$user_ip = get_client_ip();
+echo "Your IP address is: " . $user_ip;
     ?>
       
       
