@@ -114,11 +114,19 @@ function product(){
      $select_product = "select * from product order by rand() limit 9";
     $result_product = mysqli_query($conn , $select_product);
     while($row = mysqli_fetch_assoc($result_product)){
+      $product_id = $row['product_id'];
       echo "<div class='card'>
         <div class='card-img'><img src='pictures/{$row['product_image1']}' alt=''></div>
         <div class='title'>{$row['product_title']}</div>
         <p class='discription'>{$row['product_discription']}</p>
-        <div class='card-btns'><a href=index.php?add_to_cart=$row['product_id']><button>Add to Cart</button></a><a><button>View Product</button></a></div>
+        <div class='card-btns'>
+        <a href='index.php?add_to_cart=$product_id'>
+        <button>Add to Cart</button>
+        </a>
+        <a>
+        <button>View Product</button>
+        </a>
+        </div>
       </div>";
     }
           }
@@ -205,11 +213,11 @@ function cart(){
     $select_query = "select * from cart_detail where ip_address = '$ip' and product_id = $product_id";
     $result_query  = mysqli_query($conn , $select_query);
     $row_num = mysqli_num_rows($result_query);
-    if($row_num ==0){
-      include 'error.php';
+    if($row_num >0){
+      echo "<script>alert('this item is alresdy present in cart')</script>";
     }
     else{
-      echo "<script>this item is alresdy present in cart</script>";
+      $insert_query = "insert into cart_detail values($product_id , $ip_address , 0)";
     }
         }
 }

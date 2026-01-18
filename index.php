@@ -13,7 +13,9 @@ include ('includes/reuseable_func.php');
 </head>
 
 <body>
-<?php  nav();   ?>
+<?php  nav();  
+    cart();
+ ?>
   
   <div class="main">
     <div class="banner"><img src="pictures/banner.jpg" style="width:100vw;height: calc(100%-100px) ;  " alt=""></div>
@@ -23,11 +25,11 @@ include ('includes/reuseable_func.php');
     <section class="cards-container">
 
     <?php 
+
    product();
     cat_product();
     brand_product();
     search_product();
-    
 
     ?>
       
