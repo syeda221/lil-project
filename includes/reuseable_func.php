@@ -39,7 +39,7 @@ function nav(){
       <a href="#"><i class="fa-solid fa-user-plus"></i><span>Sign Up</span></a>
       <a href="#"><i class="fa-solid fa-right-to-bracket"></i><span>Login</span></a>
       <a href="#"><i class="fa-solid fa-heart"></i><span>Wishlist</span></a>
-      <a href="#"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+      <a href="indexx.php?get_cart"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
       <a href="#">USD ▼</a>
     </div>
   </div>
@@ -114,13 +114,12 @@ function product(){
      $select_product = "select * from product order by rand() limit 9";
     $result_product = mysqli_query($conn , $select_product);
     while($row = mysqli_fetch_assoc($result_product)){
-      $product_id = $row['product_id'];
       echo "<div class='card'>
         <div class='card-img'><img src='pictures/{$row['product_image1']}' alt=''></div>
         <div class='title'>{$row['product_title']}</div>
         <p class='discription'>{$row['product_discription']}</p>
         <div class='card-btns'>
-        <a href='index.php?add_to_cart=$product_id'>
+        <a href='index.php?add_to_cart={$row['product_id']}'>
         <button>Add to Cart</button>
         </a>
         <a>
@@ -205,7 +204,7 @@ function get_client_ip() {
     return $ipaddress;
 }
 
-function cart(){
+function add_cart(){
   if(isset($_GET['add_to_cart'])){
     GLOBAL $conn;
     $ip =  get_client_ip();
@@ -217,9 +216,33 @@ function cart(){
       echo "<script>alert('this item is alresdy present in cart')</script>";
     }
     else{
-      $insert_query = "insert into cart_detail values($product_id , $ip_address , 0)";
+      $insert_query = "insert into cart_detail values($product_id , '$ip', 0)";
+      $result_query = mysqli_query($conn,$insert_query);
+      echo "<script> alert('product is inserted')</script>";
     }
         }
 }
-
+function cart(){
+  if(isset($_GET['get_cart'])){
+    GLOBAL $conn; 
+    $select_query = "select * from cart_detail";
+    $result_query = mysqli_query($conn , $select_query);
+    echo "<table>
+     <tr>
+      <th>Product ID</th>
+      <th>IP address</th>
+      <th>Quantity</th>
+      </tr>";
+    while($row =mysqli_fetch_array($result_query)){
+      echo "
+      <tr>
+      <th>{$row[0]}</th>
+      <th>{$row[1]}</th>
+      <th>{$row[2]}</th>
+      </tr>
+      ";
+    }
+    echo "</table>";
+  }
+}
 ?>
