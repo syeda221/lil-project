@@ -556,13 +556,13 @@ height: 100vh;
 
 /* ====== TITLES ====== */
 .cart-card__title {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   margin-bottom: 4px;
 }
 
 .cart-card__subtitle {
-  font-size: 13px;
+  font-size: 16px;
   color: #777;
   margin-bottom: 18px;
 }
@@ -585,8 +585,8 @@ height: 100vh;
 
 /* ====== IMAGE ====== */
 .cart-item__img {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   background: #e0e0e0;
   border-radius: 8px;
   flex-shrink: 0;
@@ -598,7 +598,7 @@ height: 100vh;
 }
 
 .cart-item__name {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: #222;
 }
