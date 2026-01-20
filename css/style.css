@@ -523,13 +523,20 @@ font-size: 0.9rem;  margin-right: 5px;
     font-size: 0.8rem;
     padding: 3px 5px;
   }
-
+}
 
   /* ========cart styling======= */
   
 /* ====== CART CARD ====== */
+.cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+height: 100vh;
+}
+
 .cart-card {
-  width: 380px;
+  width: 680px;
   background: #ffffff;
   border-radius: 12px;
   padding: 18px;
@@ -635,5 +642,4 @@ font-size: 0.9rem;  margin-right: 5px;
   font-weight: 600;
   color: #222;
   margin-left: 6px;
-}
 }
