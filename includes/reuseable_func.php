@@ -255,13 +255,14 @@ function cart(){
       $product_id= $row['product_id'];
     $select_product = "select * from product where product_id = $product_id";
     $result_product = mysqli_query($conn , $select_product);
-    while($product_row = mysqli_fetch_array($result_product)){
+    while($product_row = mysqli_fetch_assoc($result_product)){
     echo "<th> {$product_row['product_price']}</th>
     </tr>"      
       ;
     }
-    echo "</table>";
   }
+    echo "</table>";
+
 }
 function cart_item(){
   if(isset($_GET['add_to_cart'])){
