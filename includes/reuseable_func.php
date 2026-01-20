@@ -148,7 +148,9 @@ function brand_product(){
         <div class='card-img'><img src='pictures/{$row['product_image1']}' alt=''></div>
         <div class='title'>{$row['product_title']}</div>
         <p class='discription'>{$row['product_discription']}</p>
-        <div class='card-btns'><button>Add to Cart</button><button>View Product</button></div>
+        <div class='card-btns'> <a href='index.php?add_to_cart={$row['product_id']}'>
+        <button>Add to Cart</button>
+        </a><button>View Product</button></div>
       </div>";
     }
     }}
@@ -165,7 +167,9 @@ function cat_product(){
         <div class='card-img'><img src='pictures/{$row['product_image1']}' alt=''></div>
         <div class='title'>{$row['product_title']}</div>
         <p class='discription'>{$row['product_discription']}</p>
-        <div class='card-btns'><button>Add to Cart</button><button>View Product</button></div>
+        <div class='card-btns'> <a href='index.php?add_to_cart={$row['product_id']}'>
+        <button>Add to Cart</button>
+        </a><button>View Product</button></div>
       </div>";
     }
     }
@@ -181,7 +185,9 @@ function search_product(){
         <div class='card-img'><img src='pictures/{$row['product_image1']}' alt=''></div>
         <div class='title'>{$row['product_title']}</div>
         <p class='discription'>{$row['product_discription']}</p>
-        <div class='card-btns'><button>Add to Cart</button><button>View Product</button></div>
+        <div class='card-btns'> <a href='index.php?add_to_cart={$row['product_id']}'>
+        <button>Add to Cart</button>
+        </a><button>View Product</button></div>
       </div>";
     }
   }
@@ -214,13 +220,13 @@ function add_cart(){
     $row_num = mysqli_num_rows($result_query);
     if($row_num >0){
       echo "<script>alert('this item is alresdy present in cart')</script>";
-      echo "<script>window.open(index.php)</script>";
+      echo "<script>window.open('index.php', '_self')</script>";
     }
     else{
       $insert_query = "insert into cart_detail values($product_id , '$ip', 0)";
       $result_query = mysqli_query($conn,$insert_query);
       echo "<script> alert('product is inserted')</script>";
-      echo "<script>window.open(index.php)</script>";
+      echo "<script>window.open('index.php','_self')</script>";
 
     }
         }
