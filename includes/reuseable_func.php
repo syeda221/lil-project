@@ -233,7 +233,7 @@ function add_cart(){
         }
 }
 function cart(){
-  if(isset($_GET['get_cart'])){
+  
     GLOBAL $conn; 
 
     $select_query = "select * from cart_detail";
@@ -255,7 +255,7 @@ function cart(){
     }
     echo "</table>";
   }
-}
+  
 function cart_item(){
   if(isset($_GET['add_to_cart'])){
     global $conn ; 
