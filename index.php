@@ -14,6 +14,7 @@ include ('includes/reuseable_func.php');
 
 <body>
 <?php  
+total_price();
 nav();  
     add_cart();
     cart();
