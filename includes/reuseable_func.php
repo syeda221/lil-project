@@ -39,7 +39,7 @@ function nav(){
       <a href="#"><i class="fa-solid fa-user-plus"></i><span>Sign Up</span></a>
       <a href="#"><i class="fa-solid fa-right-to-bracket"></i><span>Login</span></a>
       <a href="#"><i class="fa-solid fa-heart"></i><span>Wishlist</span></a>
-      <a href="index.php?get_cart"><i class="fa-solid fa-cart-shopping"></i><span><?php cart();?>Cart</span></a>
+      <a href="index.php?get_cart"><i class="fa-solid fa-cart-shopping"></i><span><?php cart();?><sup><?php cart_item(); ?></sup></span></a>
       <a href="#">USD ▼</a>
     </div>
   </div>
@@ -225,6 +225,7 @@ function add_cart(){
 function cart(){
   if(isset($_GET['get_cart'])){
     GLOBAL $conn; 
+
     $select_query = "select * from cart_detail";
     $result_query = mysqli_query($conn , $select_query);
     echo "<table>
@@ -243,6 +244,16 @@ function cart(){
       ";
     }
     echo "</table>";
+  }
+}
+function cart_item(){
+  if(isset($_GET['add_to_cart'])){
+    global $conn ; 
+    $ip =get_client_ip();
+    $select_query = "select * from cart_detail where ip_address = '$ip' ";
+    $result_query  = mysqli_query($conn , $select_query);
+    $row_num = mysqli_num_rows($result_query);
+    echo $row_num;
   }
 }
 ?>
