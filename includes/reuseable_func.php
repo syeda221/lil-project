@@ -118,6 +118,7 @@ function product(){
         <div class='card-img'><img src='pictures/{$row['product_image1']}' alt=''></div>
         <div class='title'>{$row['product_title']}</div>
         <p class='discription'>{$row['product_discription']}</p>
+        <p class='price'>{$row['product_price']}</p>
         <div class='card-btns'>
         <a href='index.php?add_to_cart={$row['product_id']}'>
         <button>Add to Cart</button>

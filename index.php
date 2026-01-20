@@ -13,7 +13,8 @@ include ('includes/reuseable_func.php');
 </head>
 
 <body>
-<?php  nav();  
+<?php  
+nav();  
     add_cart();
     cart();
  ?>
