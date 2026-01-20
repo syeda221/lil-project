@@ -302,7 +302,58 @@ function total_price(){
   }
   echo $total;
 }
-
-
-
+function cart_page(){
+global $conn ;
+$ip = get_client_ip();
+$select_query = "select * from  cart_detail where ip_address = '$ip'";
+$result_query = mysqli_query($conn , $select_query);
+$num_row = mysqli_num_rows($result_query);
 ?>
+ <div class="cart">
+    <div class="cart-card">
+
+  <div class="cart-card__header">
+    <span class="cart-card__back-link">← Shopping Continue</span>
+  </div>
+
+  <h2 class="cart-card__title">Shopping cart</h2>
+  <p class="cart-card__subtitle">You have <?= $num_row; ?> items in your cart</p>
+<?php  while($row = mysqli_fetch_assoc($result_query)){
+  $product_id = $row['product_id'];
+  $select_product = "select * from product where product_id =$product_id";
+  $result_product = mysqli_query($conn ,$select_product);
+  while($product_row = mysqli_fetch_assoc($result_product)){
+
+  
+  ?>
+  <div class="cart-card__items">
+
+    <div class="cart-item-card">
+      <div class="cart-item__img"><img src="pictures/<?= $product_row['product_image1']; ?>" alt="product image"></div>
+
+      <div class="cart-item__info">
+        <div class="cart-item__name"><?=$product_row['product_title']; ?></div>
+        <div class="cart-item__desc"><?= $product_row['product_discription']; ?></div>
+      </div>
+
+      <div class="cart-item__qty">
+        <button class="cart-item__qty-btn">-</button>
+        <span class="cart-item__qty-value">1</span>
+        <button class="cart-item__qty-btn">+</button>
+      </div>
+
+      <div class="cart-item__price"><?=$product_row['product_price']; ?></div>
+    </div>
+
+  </div>
+  <?php
+}
+}
+
+ ?>
+</div>
+</div>
+<?php
+}
+
+ ?>

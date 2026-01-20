@@ -9,10 +9,10 @@
 
 </head>
 <body>
-    <!-- <?php 
-    // cart();
-    ?> -->
-    <div class="cart">
+    <?php 
+    cart_page();
+    ?>
+    <!-- <div class="cart">
     <div class="cart-card">
 
   <div class="cart-card__header">
@@ -43,6 +43,6 @@
 
   </div>
 </div>
-</div>
+</div> -->
 </body>
 </html>
