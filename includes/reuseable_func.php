@@ -214,11 +214,14 @@ function add_cart(){
     $row_num = mysqli_num_rows($result_query);
     if($row_num >0){
       echo "<script>alert('this item is alresdy present in cart')</script>";
+      echo "<script>window.open(index.php)</script>";
     }
     else{
       $insert_query = "insert into cart_detail values($product_id , '$ip', 0)";
       $result_query = mysqli_query($conn,$insert_query);
       echo "<script> alert('product is inserted')</script>";
+      echo "<script>window.open(index.php)</script>";
+
     }
         }
 }
@@ -254,6 +257,15 @@ function cart_item(){
     $result_query  = mysqli_query($conn , $select_query);
     $row_num = mysqli_num_rows($result_query);
     echo $row_num;
+  }else{
+     global $conn ; 
+    $ip =get_client_ip();
+    $select_query = "select * from cart_detail where ip_address = '$ip' ";
+    $result_query  = mysqli_query($conn , $select_query);
+    $row_num = mysqli_num_rows($result_query);
+    echo $row_num;
+
   }
+
 }
 ?>
