@@ -294,4 +294,7 @@ function total_price(){
   }
   echo $total;
 }
+
+
+
 ?>
