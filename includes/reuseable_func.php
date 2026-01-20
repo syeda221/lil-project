@@ -243,19 +243,26 @@ function cart(){
       <th>Product ID</th>
       <th>IP address</th>
       <th>Quantity</th>
+      <th> price</th>
       </tr>";
     while($row =mysqli_fetch_array($result_query)){
       echo "
       <tr>
       <th>{$row[0]}</th>
       <th>{$row[1]}</th>
-      <th>{$row[2]}</th>
-      </tr>
-      ";
+      <th>{$row[2]}</th>";
+
+      $product_id= $row['product_id'];
+    $select_product = "select * from product where product_id = $product_id";
+    $result_product = mysqli_query($conn , $select_product);
+    while($product_row = mysqli_fetch_array($result_product)){
+    echo "<th> {$product_row['product_price']}</th>
+    </tr>"      
+      ;
     }
     echo "</table>";
   }
-  
+}
 function cart_item(){
   if(isset($_GET['add_to_cart'])){
     global $conn ; 

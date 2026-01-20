@@ -1,4 +1,4 @@
-<?php include 'inludes/resuable_func.php'; ?>
+<?php include 'includes/reuseable_func.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
