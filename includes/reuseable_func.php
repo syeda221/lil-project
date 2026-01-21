@@ -350,7 +350,7 @@ $num_row = mysqli_num_rows($result_query);
   $result_product = mysqli_query($conn ,$select_product);
   while($product_row = mysqli_fetch_assoc($result_product)){
     if(isset($_GET['add_quan'])){
-      $add_query= "";
+      $add_query= "UPDATE `cart_detail` SET `quantity`=   WHERE 1";
     }
   
   ?>
@@ -365,9 +365,10 @@ $num_row = mysqli_num_rows($result_query);
       </div>
 
       <div class="cart-item__qty">
-        <button class="cart-item__qty-btn">-</button>
-        <span class="cart-item__qty-value">0</span>
-        <a href="cart.php?add_quan"><button class="cart-item__qty-btn" id="increace" >+</button></a>
+        <button class="cart-item__qty-btn decrease">-</button>
+        <span class="cart-item__qty-value quan_value" >0</span>
+        <button class="cart-item__qty-btn increase" >+</button>
+
       </div>
 
       <div class="cart-item__price"><?=$product_row['product_price']; ?></div>
@@ -385,3 +386,15 @@ $num_row = mysqli_num_rows($result_query);
 }
 
  ?>
+<script>
+   let increase = document.querySelectorAll('.increase');
+  let quan = document.querySelectorAll('.quan_value');
+  increase.forEach((evt, index){
+    evt.addEventListener('click' , function (){
+      let value = parseInt(quan[index].innerText);
+      value++;
+      quan[index].innerText  = value;
+    })
+  })
+  
+</script>

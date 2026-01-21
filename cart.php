@@ -12,5 +12,26 @@
     <?php 
     cart_page();
     ?>
+    <script>
+   let increase = document.querySelectorAll('.increase');
+   let decrease = document.querySelectorAll('.decrease');
+  let quan = document.querySelectorAll('.quan_value');
+  increase.forEach((evt, index)=>{
+    evt.addEventListener('click' , function (){
+      let value = parseInt(quan[index].innerText);
+      value++;
+      quan[index].innerText  = value;
+    })
+  })
+    decrease.forEach((evt, index)=>{
+    evt.addEventListener('click' , function (){
+      let value = parseInt(quan[index].innerText);
+      value--;
+      quan[index].innerText  = value;
+    })
+  })
+
+  
+</script>
 </body>
 </html>
