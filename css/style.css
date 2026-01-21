@@ -382,7 +382,7 @@ font-size: 0.9rem;  margin-right: 5px;
 }
 .card-btns button{
   padding: 10px 5px;
-  display: inline-block;
+  /* display: inline-block; */
   margin: 8px;
   border: none;
   background-color: #eb9dda;
@@ -393,6 +393,7 @@ font-size: 0.9rem;  margin-right: 5px;
 }
 .card-btns{
   margin-top: 20px;
+  display: flex;
 }
 
 
