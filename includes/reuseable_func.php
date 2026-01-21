@@ -264,6 +264,8 @@ function cart(){
     echo "</table>";
 
 }
+
+
 function cart_item(){
   if(isset($_GET['add_to_cart'])){
     global $conn ; 
@@ -302,6 +304,30 @@ function total_price(){
   }
   echo $total;
 }
+
+
+function product_quentity(){
+  global $conn ;
+  $total=0;
+  $ip = get_client_ip(); 
+  $select_query = "select * from cart_detail where ip_address = '$ip'";
+  $result_query = mysqli_query($conn ,$select_query);
+  while($row = mysqli_fetch_array($result_query)){
+    $product_id= $row['product_id'];
+    $select_product = "select * from product where product_id = $product_id";
+    $result_product = mysqli_query($conn , $select_product);
+    while($product_row = mysqli_fetch_array($result_product)){
+      $product_price = array($product_row['product_price']);
+      $price_total= array_sum($product_price);
+      $total += $price_total;
+    }
+
+  }
+  echo $total;
+}
+
+
+
 function cart_page(){
 global $conn ;
 $ip = get_client_ip();
@@ -323,7 +349,9 @@ $num_row = mysqli_num_rows($result_query);
   $select_product = "select * from product where product_id =$product_id";
   $result_product = mysqli_query($conn ,$select_product);
   while($product_row = mysqli_fetch_assoc($result_product)){
-
+    if(isset($_GET['add_quan'])){
+      $add_query= "";
+    }
   
   ?>
   <div class="cart-card__items">
@@ -338,8 +366,8 @@ $num_row = mysqli_num_rows($result_query);
 
       <div class="cart-item__qty">
         <button class="cart-item__qty-btn">-</button>
-        <span class="cart-item__qty-value">1</span>
-        <button class="cart-item__qty-btn">+</button>
+        <span class="cart-item__qty-value">0</span>
+        <a href="cart.php?add_quan"><button class="cart-item__qty-btn" id="increace" >+</button></a>
       </div>
 
       <div class="cart-item__price"><?=$product_row['product_price']; ?></div>
