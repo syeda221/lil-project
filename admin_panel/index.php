@@ -13,7 +13,7 @@
         </div>
         <div class="nav-message">
             <h4>Welcome Qunoot</h4>
-            <button>Logout</button>
+            <button>Log out</button>
         </div>
     </nav>
     <section>
