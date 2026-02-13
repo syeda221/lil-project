@@ -12,7 +12,7 @@
             <img src="../pictures/logo1.png" alt="">
         </div>
         <div class="nav-message">
-            <h4>Welcome Qunoot</h4>
+            <h4>Welcome Admin Qunoot</h4>
             <button>Log out</button>
         </div>
     </nav>
