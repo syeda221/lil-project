@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav>
-        <div class="admin-logo-
+        <div class="admin-logo-img">
             <img src="../pictures/logo1.png" alt="">
         </div>
         <div class="nav-message">
